@@ -1,0 +1,29 @@
+@mixin respond($break) {
+    @if $break == phone {
+        @media (max-width: 37.5em) {@content};  //600px
+    }
+    @if $break == port {
+        @media (max-width: 56.25em) {@content}; //900px
+    }
+    @if $break == for-slide {
+        @media (max-width: 53em) {@content};    //850px
+    }
+    @if $break == thousand {
+        @media (max-width: 62.5em) {@content};    //1000px
+    }
+    @if $break == land {
+        @media (max-width: 75em) {@content};    //1200px
+    }
+    @if $break == desk {
+        @media (max-width: 112em) {@content};    //1800px 
+    }
+}
+
+@mixin center-vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+

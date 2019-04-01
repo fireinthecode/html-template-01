@@ -1,0 +1,35 @@
+.resume {
+    background-color: $primary-color;
+    height: auto;
+    min-height: 50vh;
+    width: 100vw;
+    max-width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+    .box {
+        margin:3rem;
+        text-align: center;
+
+        .number {
+            color: darken($color: $tertiary-color, $amount: 10);
+            font-size: 4rem;
+            font-weight: 900;
+        }
+
+        .name {
+            color: $white;
+            font-weight: 300;
+            font-size: 2rem;
+        }
+
+        hr {
+            width: 70%;
+            margin: 1rem auto;
+            border:solid 1px $secondary-color;
+        }
+    }
+}

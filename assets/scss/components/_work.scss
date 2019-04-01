@@ -1,0 +1,115 @@
+.our-work {
+    background-color: $background-1;
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    max-width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    &_title {
+        padding: 5rem 0;
+
+        h1 {
+            font-size: 2.5rem; 
+            font-weight: bold;
+            color: $black;
+            @include respond(port) {
+                font-size: 2rem;
+            }
+        }
+
+        hr {
+            height: .5rem;
+            width: 5rem;
+            background-color: $primary-color;
+            margin: .5rem auto;
+        }
+    }
+
+    &_carousel {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+        @include respond(thousand) {
+            width: 80%;
+        }
+
+        .slide {
+            width: 17rem;
+            margin: .7rem;
+            box-shadow: 2px 7px 48px -8px rgba(0,0,0,0.75);
+            @include respond(thousand) {
+                transform: scale(.8);
+                margin: -1rem;
+                width: 60%;
+            }
+            @include respond(phone) {
+                width: 80%;
+            }
+
+            .avatar-section {
+                height: 13rem;
+                background: url(../imgs/slideimage1.jpg);
+                background-size: cover;
+                background-position: center;
+                border-top-left-radius: .4rem;
+                border-top-right-radius: .4rem;
+            }
+
+            .info-section {
+                padding: 1rem;
+                background-color: $white;
+                border-bottom-left-radius: .4rem;
+                border-bottom-right-radius: .4rem;
+
+                h1 {
+                    font-size: 1.3rem; 
+                    padding-bottom: .5rem;
+                }
+
+                h6 {
+                    color: $grey;
+                }
+
+                .slide-case {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .slide-logo {
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+            }
+        }
+
+        .slide-center {
+            transform: scale(1.05);
+            @include respond(thousand) {
+                transform: scale(.9);
+            }
+        }
+
+        .slide1, .slide3{
+            @include respond(for-slide) {
+                display: none;
+            }
+        }
+
+        .arrow-btn {
+            cursor: pointer;
+            height: 3.5rem;
+            width: 3.5rem;
+            background-color: $white;
+            border-radius: 50%;
+            margin: auto -2.3rem;
+            z-index: 5;
+            text-align: center;
+            font-size: 2.3rem;
+            color: $grey;
+        }
+    }
+}

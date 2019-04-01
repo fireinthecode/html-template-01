@@ -1,0 +1,59 @@
+.newsletter {
+    height: 35vh;
+    width: 100%;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond(phone) {
+            height: 50vh;
+        }
+    
+
+    &_container {
+        text-align: center;
+
+
+        .newsletter_title {
+        color: $white;
+        font-weight: 300;
+        font-size: 1.3rem;
+        padding-bottom: 1.5rem;
+        @include respond(port) {
+            font-size: 1rem;
+        }
+        
+        }
+
+        form {
+            .newsletter_input {
+                height: 2rem;
+                width: 23rem;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+                padding-left: 2rem;
+                border: solid $white;
+                @include respond(port) {
+                    width: 18rem;
+                }
+                @include respond(phone) {
+                    width: 50%;
+                }
+            }
+
+            .search-btn {
+                cursor: pointer;
+                height: 2rem;
+                border-top-right-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+                background-color: $secondary-color;
+                border: solid $secondary-color;
+                color: $white;
+                margin-left: -.27rem;
+                padding: 0 2rem;
+                font-weight: 300;
+                font-size: .8rem;
+            }
+        }   
+    }
+}

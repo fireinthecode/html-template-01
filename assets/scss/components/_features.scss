@@ -1,0 +1,87 @@
+.features {
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    @include center-vertical;
+    text-align: center;
+
+    &_title {
+        padding-top: $section-padding;
+
+        h1 {
+            font-size: 2.5rem;
+            color: $black;
+            @include respond(port) {
+                font-size: 2rem;
+            }
+        }
+
+        hr {
+            height: .5rem;
+            width: 5rem;
+            background-color: $primary-color;
+            margin: .5rem auto;
+        }
+    }
+
+    &_options {
+        display: flex;
+        justify-content: space-around;
+        color: $grey;
+        flex-wrap: wrap;
+        margin: 4rem auto;
+
+        .option {
+            width: 15rem;
+            text-align: center;
+            margin: 2rem;
+
+            .option-icon {
+                width: 40%;
+            }
+
+            .option-title {
+                font-size: 1.4rem;
+                padding-top: $section-padding;
+            }
+        }
+        
+    }
+
+    &_buttons {
+        padding-bottom: $section-padding;
+        
+        .btn {
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-family: Roboto;
+            padding: .8rem 1.8rem;
+            border:solid 2px $secondary-color;
+            border-radius: 1.8rem;
+            background-color: transparent;
+            margin: 1rem;
+            transition: all .5s ease; 
+        }
+
+        .btn2 {
+            color: $white;
+            background-color: $secondary-color;
+
+            &:hover {
+                background-color: $white;
+                color: $secondary-color;
+            }
+        }
+        
+        .btn3 {
+            color: $secondary-color;
+            margin-left: 1.5rem;
+
+            &:hover {
+                background-color: $secondary-color;
+                color: $white;
+            }
+        }
+    }
+}
